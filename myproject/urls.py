@@ -19,5 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),  # Django Allauth URLs for login, registration, etc.
+    path('secure/', include('secure.urls')),     # URLs for the secure app
     path('', include('landing.urls')), # Set landing page as homepage
 ]
