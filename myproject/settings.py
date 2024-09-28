@@ -138,7 +138,10 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 # Redirect URL after successful login
-LOGIN_REDIRECT_URL = '/secure/dashboard/'
+LOGIN_REDIRECT_URL = '/dashboard/'
+ACCOUNT_SIGNUP_REDIRECT_URL = '/dashboard/'  # This redirects users after signup
+LOGOUT_REDIRECT_URL = '/'  # Redirect after logout
+LOGIN_URL = '/login/'  # Where the login page is located
 
 # Email verification settings
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
