@@ -144,16 +144,19 @@ LOGOUT_REDIRECT_URL = '/'  # Redirect after logout
 LOGIN_URL = '/login/'  # Where the login page is located
 
 # Email verification settings
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_EMAIL_REQUIRED = True
 
 # Site ID for email verification
 SITE_ID = 1
 
 
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 # Additional allauth settings (if needed)
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
